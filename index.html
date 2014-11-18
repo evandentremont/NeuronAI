@@ -118,7 +118,7 @@ console.log(nodes);
       .attr("class", function(d) { return "link source-" + d.source.key + " target-" + d.target.key; })
 
       .attr("stroke-width", function(d) {
-         return (100 + d.source.size) / 200*5;
+         return Math.abs(d.source.size) / 100*5;
       })
 
       .attr("stroke", function(d) {
